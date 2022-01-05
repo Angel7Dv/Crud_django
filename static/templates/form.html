@@ -1,0 +1,68 @@
+{% extends 'index.html' %}  <!-- trae a main como padre -->
+
+{% block title %}Formulario{% endblock %}
+
+{% block content %}  
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            {% csrf_token %} 
+                <!-- {{task_form}} to display all -->
+                {{task_form.title}} <!-- to display particular field-->
+                <button type="submit">SUBMIT</button>
+        </form>
+        <table class="table">
+            <thead>
+              <tr>  
+                <th scope="col">title</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+
+                {% for t in tasks_list %}
+
+                
+                           
+                    
+                    
+                    <tr> 
+                        <td> 
+                        {% if t.completed == True %}
+                    
+                            <strike>{{t.title}} </strike>
+                        {% else %}
+                            {{t.title}}
+                        {% endif %} 
+                        </td>
+
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a class="btn btn-outline-primary" href="{% url "update_task" t.id %}">✒</a>
+                                <a class="btn btn-outline-danger" aria-label="delete" placeholder="delete" href="{% url "delete_task" t.id %}">❌</a>
+                            </div>
+                        </td>
+                      </tr>
+    
+               
+                {% endfor %}
+            
+            </tbody>
+          </table>
+          
+    </div>
+
+            <!-- this changes -->
+        <ol>
+           
+        </ol>
+</div>
+
+
+
+
+<!-- bloque de contenido a utilizar -->
+
+{% endblock content %} 
