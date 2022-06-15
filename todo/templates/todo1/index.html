@@ -1,0 +1,27 @@
+{% extends '../base/base.html' %}
+
+
+{% block content %}
+<h1>hello world todo 1</h1>
+
+<div>
+
+    <form id="form_todo_1" class="flex" action="" method="post">
+        {% csrf_token %}
+        {{ todo_form.as_p }}
+
+        <button type="submit">add</button>
+    </form>
+</div>
+
+<script>
+    form_todo_1 = document.getElementsByClassName("form_todo_1")
+    console.log(form_todo_1)
+
+    
+
+</script>
+
+
+
+{% endblock content %}

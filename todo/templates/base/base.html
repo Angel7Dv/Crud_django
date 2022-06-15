@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'all-tailwind.css' %}">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-slate-700 text-white ">
+
+    {% include './navbar.html' %}
+
+    <section class="h-full mx-24 py-24 flex flex-col items-center ">
+        {% block content %}
+
+        {% endblock content %}
+    </section>
+
+</body>
+
+</html>
