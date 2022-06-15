@@ -1,0 +1,27 @@
+{
+  "name": "django_crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss static/css/main.css -o static/css/main.min.css",
+    "build-watch": "npx tailwindcss -i ./static/css/main.css -o ./static/css/main.min.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RagAndRoll/Crud_django.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RagAndRoll/Crud_django/issues"
+  },
+  "homepage": "https://github.com/RagAndRoll/Crud_django#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.1.3"
+  }
+}

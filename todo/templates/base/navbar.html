@@ -3,19 +3,23 @@
 <nav class="flex justify-between bg-gray-900 shadow-b text-xl font-bold px-24 py-2">
 
     <div>
-        home
+        <a href="{% url 'index' %}">
+
+            home
+        </a>
     </div>
 
     <div class="w-1/2 text-lg">
 
         <ul class="flex justify-end space-x-8 ">
             <li class="bg-teal-700 rounded-xl border px-4 text-white">
-                <a href="{% url 'todo1' %}">
+                <a href="{% url 'todo' %}">
                     todo1
                 </a>
             </li>
             <li class="bg-sky-700 rounded-xl border px-4 text-white">
-                <a href="{# % url '' % #}">
+                <a href="{% url 'board' %}">
+
                     todo2
                 </a>
             </li>

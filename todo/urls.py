@@ -1,10 +1,24 @@
 from django.urls import path
-from .views import index, todo1_get_and_post
+from .view_todo import todo_get_and_post
+
+from .view_board import *
+
+from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', index, name="index"),
+    path('', TemplateView.as_view(template_name="base/index.html"), name="index"),
 
-    #todo1
-    path('todo1', todo1_get_and_post, name="todo1")
+    # Todo
+    path('todo/', todo_get_and_post, name="todo"),
+
+    # Board
+    path('board/', board, name="board"),
+
+
+    # Notes
+    # path('notes/', notes, name="notes"),
+
+
+
 
 ]
