@@ -6,3 +6,24 @@ html, body{
     height: 100vh;
     width: 100%;
 }
+
+
+.scrollbar::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #0028ac;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #5b65ff;
+    border-radius: 100vh;
+    border: 3px solid #002677;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #0077ff;
+}

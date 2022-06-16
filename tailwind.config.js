@@ -9,6 +9,7 @@
 
 
 module.exports = {
+  // content: ["./todo/templates/**/*.{html,js}"],
   content: ["./todo/templates/**/*.{html,js}"],
   theme: {
     extend: {},
